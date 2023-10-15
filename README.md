@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# Installation Command
+
+npx create-next-app@latest ./
+
+npm install bcrypt mongodb mongoose next-auth
+
+mongodb start : 
+export MONGODB_VERSION=6.0-ubi8
+
+
+MongoDB Configuration 
+
+docker pull mongo
+docker run -d --name mongo_localdb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin123 mongo
+docker run -it --rm --link mongo_localdb:mongo mongo:4.2 mongo --host mongo --username admin --password admin123
